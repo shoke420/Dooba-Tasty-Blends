@@ -1,0 +1,155 @@
+:root {
+  --forest-green: #176b45;
+  --deep-green: #104b33;
+  --fresh-green: #eaf5ee;
+  --ink: #1d2923;
+  --muted: #718078;
+  --page: #f6f8f5;
+  --line: #e5ebe6;
+  --bs-success: #176b45;
+  --bs-success-rgb: 23, 107, 69;
+}
+
+* { box-sizing: border-box; }
+body {
+  background: var(--page);
+  color: var(--ink);
+  font-family: "Plus Jakarta Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+.navbar {
+  background: rgba(255,255,255,.96) !important;
+  backdrop-filter: blur(12px);
+  border-color: var(--line) !important;
+}
+.logo-box {
+  width: 48px; height: 48px; border-radius: 15px;
+  background: linear-gradient(145deg, #238657, #10583a);
+  color: #fff; font-weight: 800; font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; flex-shrink: 0; letter-spacing: .04em;
+  box-shadow: 0 6px 16px rgba(23,107,69,.18);
+}
+.logo-box img { width: 100%; height: 100%; object-fit: cover; }
+.navbar .text-success { color: var(--forest-green) !important; }
+.hero-banner {
+  position: relative; overflow: hidden;
+  background: radial-gradient(circle at 15% 20%, rgba(204,235,213,.7), transparent 34%),
+              linear-gradient(120deg, #eef7ef 0%, #fff 55%, #f4f8ed 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero-banner .container { position: relative; z-index: 1; }
+.hero-eyebrow, .section-kicker {
+  color: var(--forest-green); font-size: .72rem; font-weight: 800;
+  letter-spacing: .13em; text-transform: uppercase;
+}
+.hero-banner h1 {
+  max-width: 760px; margin: 12px auto 8px;
+  font-family: "Fraunces", Georgia, serif;
+  font-size: clamp(2rem, 4vw, 3.35rem); line-height: 1.12;
+  color: var(--deep-green);
+}
+.hero-banner p { font-size: .98rem; }
+.card {
+  border: 1px solid var(--line) !important;
+  border-radius: 18px !important;
+  box-shadow: 0 8px 28px rgba(25, 50, 35, .055) !important;
+}
+#customerView .sticky-top { z-index: 5; }
+#customerView .sticky-top .card-body { padding: 1.5rem !important; }
+.food-card {
+  height: 100%; overflow: hidden; border: 1px solid var(--line) !important;
+  border-radius: 17px !important; background: #fff;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.food-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(25, 75, 48, .11) !important;
+  border-color: #b8d8c3 !important;
+}
+.food-img { width: 100%; height: 190px; object-fit: cover; display: block; }
+.food-icon-placeholder {
+  height: 190px; display: grid; place-items: center;
+  color: #39845d; font-size: 3rem;
+  background: linear-gradient(135deg, #e6f3e9, #f7faf5);
+}
+.food-card .card-body { padding: 1.1rem; }
+.food-card h6 { font-size: 1rem; line-height: 1.4; }
+.food-card .text-success { color: var(--forest-green) !important; }
+.category-filters { display: flex; flex-wrap: wrap; gap: .5rem; }
+.category-filters .btn { padding: .48rem .95rem; font-weight: 700; }
+.menu-search { max-width: 440px; }
+.menu-search .input-group-text, .menu-search .form-control {
+  background: #fff; border-color: var(--line); padding: .75rem .9rem;
+}
+.menu-search .input-group-text { color: var(--muted); border-radius: 11px 0 0 11px; }
+.menu-search .form-control { border-radius: 0 11px 11px 0; }
+.form-control, .form-select, .input-group-text {
+  border-color: #dfe7e1; border-radius: 10px;
+  padding: .68rem .8rem; font-size: .9rem;
+}
+.form-control:focus, .form-select:focus {
+  border-color: #79b895; box-shadow: 0 0 0 .2rem rgba(23,107,69,.1);
+}
+.form-label { color: #405047; }
+.btn { border-radius: 10px; font-weight: 600; transition: transform .15s ease, box-shadow .15s ease; }
+.btn-success { background: var(--forest-green); border-color: var(--forest-green); }
+.btn-success:hover, .btn-success:focus { background: var(--deep-green); border-color: var(--deep-green); }
+.btn-outline-success { color: var(--forest-green); border-color: #a9cbb6; }
+.btn-outline-success:hover { background: var(--forest-green); border-color: var(--forest-green); }
+.btn:hover:not(:disabled) { transform: translateY(-1px); }
+#whatsappOrderBtn { box-shadow: 0 8px 18px rgba(23,107,69,.18); }
+.checkout-note { font-size: .73rem !important; }
+.badge { letter-spacing: .01em; font-weight: 700; }
+.mobile-cart-bar {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 1040;
+  background: var(--deep-green); color: #fff; padding: 12px 16px;
+  box-shadow: 0 -5px 22px rgba(0,0,0,.14);
+}
+footer { border-color: var(--line) !important; }
+.social-link {
+  width: 38px; height: 38px; display: inline-flex; align-items: center; justify-content: center;
+  border: 1px solid var(--line); border-radius: 50%; color: var(--forest-green);
+  text-decoration: none; transition: all .2s ease;
+}
+.social-link:hover { background: var(--forest-green); color: #fff; border-color: var(--forest-green); }
+#adminView .card-body { padding: 1.35rem; }
+#adminView h3, #adminView h6 { color: var(--deep-green); }
+#adminMenuList > div, #adminOrderLog > div { gap: 12px; }
+
+@media (max-width: 991.98px) {
+  #customerView .sticky-top { position: static !important; }
+  body { padding-bottom: 76px; }
+}
+@media (max-width: 575.98px) {
+  .navbar { padding-left: .65rem !important; padding-right: .65rem !important; }
+  .navbar .container { gap: 8px; }
+  .logo-box { width: 40px; height: 40px; border-radius: 12px; font-size: 12px; }
+  .navbar .fs-5 { font-size: .78rem !important; }
+  .navbar small { display: none !important; }
+  #shopStatusBadge, #openAdminBtn { font-size: 10px; padding: 6px 8px !important; }
+  #openAdminBtn { white-space: nowrap; }
+  .hero-banner { padding: 2.5rem 0 !important; }
+  .hero-banner h1 { font-size: 1.9rem; }
+  .hero-banner p { font-size: .88rem; }
+  .menu-heading { align-items: flex-start !important; }
+  .category-filters { flex-wrap: nowrap; overflow-x: auto; padding: 2px 0 8px; -webkit-overflow-scrolling: touch; }
+  .category-filters .btn { white-space: nowrap; flex-shrink: 0; }
+  .food-img, .food-icon-placeholder { height: 155px; }
+  #customerView .sticky-top .card-body { padding: 1.15rem !important; }
+  #adminMenuList > div { align-items: flex-start !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
+
+/* Owner Kitchen category manager */
+.category-admin-list { display: grid; gap: .45rem; }
+.category-admin-row {
+  display: flex; align-items: center; justify-content: space-between; gap: .75rem;
+  padding: .55rem .7rem; border: 1px solid var(--line); border-radius: 11px;
+  background: #fbfdfb;
+}
+.category-admin-row .btn { min-width: 34px; }
+#adminView .card h6 { letter-spacing: -.01em; }
+#adminOrderLog { max-height: 620px; overflow-y: auto; }
